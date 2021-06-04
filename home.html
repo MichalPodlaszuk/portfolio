@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Personal Portfolio | Michal Podlaszuk</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.banner {
+    position: relative;
+    min-height: 100vh;
+    background: url(templates/banner1.jpg);
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section{
+    padding: 100px;
+}
+.banner h2{
+    font-size: 3em;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+.banner h2 span{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.banner h3{
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 500;
+}
+.btn{
+    position: relative;
+    background: #2196f3;
+    display: inline-block;
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+header.sticky{
+    background: #fff;
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+header .logo{
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+header.sticky .logo{
+    color: #111;
+}
+header ul{
+    position: relative;
+    display: flex;
+}
+header ul li{
+    position: relative;
+    list-style: none;
+}
+header ul li a{
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+}
+header.sticky ul li a{
+    color: #111;
+}
+.heading{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #111;
+}
+.heading h2{
+    font-weight: 600;
+    font-size: 30px;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+.contentBx{
+    padding-right: 30px;
+}
+.contentBx h3{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.w50{
+    min-width: 50%;
+}
+img{
+    max-width: 100%;
+}
+.services{
+    background: #111;
+}
+.heading.white{
+    color: #fff;
+}
+.services .content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.services .content .servicesBx{
+    padding: 40px 20px;
+    background: #222;
+    color: #fff;
+    max-width: 340px;
+    margin: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+.services .content .servicesBx:hover{
+    background: #2196f3;
+}
+.services .content .servicesBx img{
+    max-width: 80px;
+    filter: invert(1);
+}
+.services .content .servicesBx h2{
+    font-size:20px;
+    font-weight: 600;
+}
+.work .content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.work .content .workBx{
+    width: 50%;
+    padding: 20px;
+}
+.work .content .workBx img{
+    max-width: 100%;
+}
+.testimonial{
+    background: #f7f7f7;
+}
+.testimonial .content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.testimonial .content .testimonialBx{
+    max-width: calc(50% - 40px);
+    padding: 60px 40px;
+    margin: 20px;
+    background: #2196f3;
+}
+.testimonial .content .testimonialBx p{
+    color: #fff;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 300;
+}
+.testimonial .content .testimonialBx h3{
+    margin-top: 40px;
+    text-align: end;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1em;
+}
+.testimonial .content .testimonialBx h3 span{
+    font-size: 14px;
+    font-weight: 400;
+}
+.contact{
+    background: #111;
+}
+.formBx{
+    min-width: 60%;
+}
+.formBx form {
+    display: flex;
+    flex-direction: column;
+}
+.formBx form h3,
+.contactInfo h3{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.formBx form input,
+.formBx form textarea{
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: #222;
+    color: #fff;
+    resize: none;
+}
+.formBx form textarea{
+    min-height: 200px;
+}
+.formBx form input::placeholder,
+.formBx form textarea::placeholder{
+    color: #999;
+}
+.formBx form input[type="submit"]{
+    max-width: 100px;
+    background: #2196f3;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.contactInfo{
+    min-width: 40%;
+}
+.contactInfoBx{
+    position: relative;
+}
+.contactInfoBx .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.icon{
+    min-width: 20px;
+    max-width: 20px;
+    min-height: 20px;
+    max-height: 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 2px;
+    right: 5px;
+}
+.contactInfoBx .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+.contactInfoBx .box .text h3{
+    font-weight: 500;
+    color: #2196f3;;
+    margin-bottom: 0;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Portfolio</a>
+        <div class="toggle"></div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Testimonial</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section class="banner">
+        <div class="textBx">
+            <h2>Hello, I'm<br><span>Michał Podlaszuk.</span></h2>
+            <h3>I'm an AI engineer.</h3>
+            <a href="#" class="btn">About me</a>
+        </div>
+    </section>
+    <section class="about">
+        <div class="heading">
+            <h2>About Me</h2>
+        </div>
+        <div class="content">
+            <div class="contentBx w50">
+                <h3>I'm an AI engineer.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat placerat risus quis
+                    porttitor. Phasellus imperdiet vulputate nibh, ut mattis leo suscipit rutrum. Interdum et malesuada
+                    fames ac ante ipsum primis in faucibus. Pellentesque feugiat, diam a ultrices eleifend, felis eros
+                    venenatis tellus, a aliquet purus est eget sapien. Quisque augue purus, congue at mauris quis,
+                    malesuada faucibus ligula. Pellentesque tristique ac velit vel luctus. Ut porttitor, lacus vel
+                    aliquet dignissim, tellus eros dictum sem, non tincidunt nisl turpis a eros. Pellentesque hendrerit
+                    erat in molestie porta. Pellentesque in dignissim purus. Proin interdum sem ac leo vulputate, sed
+                    porta felis dictum. Cras tincidunt faucibus dolor, id euismod leo. Praesent pretium, dolor vel
+                    mattis sagittis, nisi arcu hendrerit purus, at cursus est ex vitae magna. Praesent euismod, sapien
+                    egestas venenatis euismod, velit justo pretium velit, nec pulvinar neque libero at diam. Maecenas
+                    ac tincidunt sapien, ac pulvinar nibh. Nunc laoreet neque erat, ac euismod arcu hendrerit id.</p>
+            </div>
+            <div class="w50">
+                <img src="./templates/img1.png" class="img" alt="ai pic">
+            </div>
+        </div>
+    </section>
+    <section class="services">
+        <div class="heading white">
+            <h2>My Skills</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="content">
+            <div class="servicesBx">
+                <img src="./templates/icon1.png" alt="icon1">
+                <h2>Python</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat placerat risus quis
+                    porttitor. Phasellus imperdiet vulputate nibh, ut mattis leo suscipit rutrum. Interdum et malesuada
+                    fames ac ante ipsum primis in faucibus.</p>
+            </div>
+            <div class="servicesBx">
+                <img src="./templates/icon2.png" alt="icon1">
+                <h2>Data Science</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat placerat risus quis
+                    porttitor. Phasellus imperdiet vulputate nibh, ut mattis leo suscipit rutrum. Interdum et malesuada
+                    fames ac ante ipsum primis in faucibus.</p>
+            </div>
+            <div class="servicesBx">
+                <img src="./templates/icon3.png" alt="icon1">
+                <h2>Machine Learning</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat placerat risus quis
+                    porttitor. Phasellus imperdiet vulputate nibh, ut mattis leo suscipit rutrum. Interdum et malesuada
+                    fames ac ante ipsum primis in faucibus.</p>
+            </div>
+            <div class="servicesBx">
+                <img src="./templates/icon4.png" alt="icon1">
+                <h2>Deep Learning</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat placerat risus quis
+                    porttitor. Phasellus imperdiet vulputate nibh, ut mattis leo suscipit rutrum. Interdum et malesuada
+                    fames ac ante ipsum primis in faucibus.</p>
+            </div>
+            <div class="servicesBx">
+                <img src="./templates/icon5.png" alt="icon1">
+                <h2>Computer Vision</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat placerat risus quis
+                    porttitor. Phasellus imperdiet vulputate nibh, ut mattis leo suscipit rutrum. Interdum et malesuada
+                    fames ac ante ipsum primis in faucibus.</p>
+            </div>
+            <div class="servicesBx">
+                <img src="./templates/icon6.png" alt="icon1">
+                <h2>Natural Language Processing</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat placerat risus quis
+                    porttitor. Phasellus imperdiet vulputate nibh, ut mattis leo suscipit rutrum. Interdum et malesuada
+                    fames ac ante ipsum primis in faucibus.</p>
+            </div>
+        </div>
+    </section>
+    <section class="work">
+        <div class="heading">
+            <h2>My Projects</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="content">
+            <div class="workBx">
+                <img src="./templates/placeholder.jpg" alt="project1">
+            </div>
+            <div class="workBx">
+                <img src="./templates/placeholder.jpg" alt="project1">
+            </div>
+            <div class="workBx">
+                <img src="./templates/placeholder.jpg" alt="project1">
+            </div>
+            <div class="workBx">
+                <img src="./templates/placeholder.jpg" alt="project1">
+            </div>
+        </div>
+        <div class="heading">
+            <a href="#" class="btn">View More</a>
+        </div>
+    </section>
+    <section class="testimonial">
+        <div class="heading">
+            <h2>Testimonial</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="content">
+            <div class="testimonialBx">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat placerat risus quis
+                    porttitor. Phasellus imperdiet vulputate nibh, ut mattis leo suscipit rutrum. Interdum et malesuada
+                    fames ac ante ipsum primis in faucibus.</p>
+                <h3>Someone Famous<br><span>Creative Designer</span></h3>
+            </div>
+            <div class="testimonialBx">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat placerat risus quis
+                    porttitor. Phasellus imperdiet vulputate nibh, ut mattis leo suscipit rutrum. Interdum et malesuada
+                    fames ac ante ipsum primis in faucibus.</p>
+                <h3>Someone Famous<br><span>Creative Designer</span></h3>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="heading white">
+            <h2>Contact Me</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="content">
+            <div class="contactInfo">
+                <h3>Contact Info</h3>
+                <div class="contactInfoBx">
+                    <div class="box">
+                        <div class="icon">
+                            <img src="./static/map-marker-white.png" class="icon" alt="map-marker">
+                        </div>
+                        <div class="text">
+                            <h3>Location</h3>
+                            <p>Gdańsk,<br>Poland</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <img src="./static/phone-white.png" class="icon" alt="phone">
+                        </div>
+                        <div class="text">
+                            <h3>Phone</h3>
+                            <p>+48 690 320 855</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <img src="./static/envelope-white.png" class="icon" alt="envelope">
+                        </div>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p>michalpodlaszuk@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="formBx">
+                <form>
+                    <h3>Message Me</h3>
+                    <input type="text" name="" placeholder="Full Name">
+                    <input type="email" name="" placeholder="Email">
+                    <textarea placeholder="Your Message"></textarea>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </div>
+    </section>
+    <div class="copyright">
+        <p></p>
+    </div>
+    <script type="text/javascript">
+        window.addEventListener('scroll', function(){
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+    </script>
+</body>
+</html>
