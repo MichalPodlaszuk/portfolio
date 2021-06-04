@@ -110,6 +110,14 @@ header.sticky ul li a{
     font-weight: 600;
     font-size: 30px;
 }
+.heading a{
+    color: #fff;
+}
+.contentw50{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -15px;
+}
 .content{
     display: flex;
     justify-content: space-between;
@@ -123,6 +131,28 @@ header.sticky ul li a{
 }
 .w50{
     min-width: 50%;
+}
+.w50 img{
+    border-radius: 50%;
+    max-width: 50%;
+}
+.w50 .profile{
+    position: relative;
+    top: 10px;
+    left: 10%
+}
+.w50 .ai{
+    max-width: 30%;
+    position: relative;
+    bottom: 30%;
+    left: 20%;
+}
+.w50 .spider{
+    max-width: 25%;
+    position: relative;
+    bottom: 20%;
+    left: 67%;
+    margin-top: 20px;
 }
 img{
     max-width: 100%;
@@ -385,80 +415,81 @@ img{
         <div class="heading">
             <h2>About Me</h2>
         </div>
-        <div class="content">
+        <div class="contentw50">
             <div class="contentBx w50">
                 <h3>I'm an AI engineer.</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat placerat risus quis
-                    porttitor. Phasellus imperdiet vulputate nibh, ut mattis leo suscipit rutrum. Interdum et malesuada
-                    fames ac ante ipsum primis in faucibus. Pellentesque feugiat, diam a ultrices eleifend, felis eros
-                    venenatis tellus, a aliquet purus est eget sapien. Quisque augue purus, congue at mauris quis,
-                    malesuada faucibus ligula. Pellentesque tristique ac velit vel luctus. Ut porttitor, lacus vel
-                    aliquet dignissim, tellus eros dictum sem, non tincidunt nisl turpis a eros. Pellentesque hendrerit
-                    erat in molestie porta. Pellentesque in dignissim purus. Proin interdum sem ac leo vulputate, sed
-                    porta felis dictum. Cras tincidunt faucibus dolor, id euismod leo. Praesent pretium, dolor vel
-                    mattis sagittis, nisi arcu hendrerit purus, at cursus est ex vitae magna. Praesent euismod, sapien
-                    egestas venenatis euismod, velit justo pretium velit, nec pulvinar neque libero at diam. Maecenas
-                    ac tincidunt sapien, ac pulvinar nibh. Nunc laoreet neque erat, ac euismod arcu hendrerit id.</p>
+                <p>I am also really easy going person, I love people, I love working with them and I love helping them.
+                    I am really social person and I can learn new things really fast. I also love animals and I keep tarantulas.
+                    I used to be a chemistry enthusiast, I even went to Gdańsk University of Technology to study
+                    chemistry. This however got interrupted by the coronavirus so I dropped out. For a brief moment I
+                    wanted to become a stock trader but I needed money for that, and the coronavirus once again spoiled
+                    my plans, there was no job for a young inexperienced man like me unfortunately.
+                    After that I decided that I have to move forward somehow and I recalled I used to love
+                    coding back in the days, I started to look around for some online courses and I found Strive School.
+                    Fast forward 6 months of hard work and I am here at the finish of the master camp, ready to conquer the
+                    job market!
+                </p>
             </div>
             <div class="w50">
-                <img src="./templates/img1.png" class="img" alt="ai pic">
+                <img src="./templates/profile.jpg" class="profile" alt="profile pic">
+                <img src="./templates/img1.png" class="ai" alt="profile pic">
+                <img src="./templates/spider.jpg" class="spider" alt="profile pic">
             </div>
         </div>
     </section>
     <section class="skills" id="skills">
         <div class="heading white">
             <h2>My Skills</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>These are the most important skills I possess.</p>
         </div>
         <div class="content">
             <div class="skillsBx">
                 <img src="./templates/icon1.png" alt="icon1">
                 <h2>Python</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat placerat risus quis
-                    porttitor. Phasellus imperdiet vulputate nibh, ut mattis leo suscipit rutrum. Interdum et malesuada
-                    fames ac ante ipsum primis in faucibus.</p>
+                <p>I have advanced level Python skills, I know object oriented programming, I can work work with basics
+                    like numbers, strings, lists, dictionaries or loops and also I know some neat tricks to speed up the
+                    code like decorators, datatype manipulation and usefull built-in libraries.</p>
             </div>
             <div class="skillsBx">
                 <img src="./templates/icon2.png" alt="icon1">
                 <h2>Data Science</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat placerat risus quis
-                    porttitor. Phasellus imperdiet vulputate nibh, ut mattis leo suscipit rutrum. Interdum et malesuada
-                    fames ac ante ipsum primis in faucibus.</p>
+                <p>I can visualise the data, even 4th and more dimensional data is not scary for me since I know
+                    dimensionality reduction techniques. I also know how to work with tabular, text, image, video and audio
+                    data, how to augment it and preprocess too of course.</p>
             </div>
             <div class="skillsBx">
                 <img src="./templates/icon3.png" alt="icon1">
                 <h2>Machine Learning</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat placerat risus quis
-                    porttitor. Phasellus imperdiet vulputate nibh, ut mattis leo suscipit rutrum. Interdum et malesuada
-                    fames ac ante ipsum primis in faucibus.</p>
+                <p>I have the knowledge how to implement machine learning algorithms, mainly from sklearn. I can also
+                    make them from scratch if needed. Random forest classifier, k nearest neighbors, k means, neural
+                    network, support vector machines and many more.</p>
             </div>
             <div class="skillsBx">
                 <img src="./templates/icon4.png" alt="icon1">
                 <h2>Deep Learning</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat placerat risus quis
-                    porttitor. Phasellus imperdiet vulputate nibh, ut mattis leo suscipit rutrum. Interdum et malesuada
-                    fames ac ante ipsum primis in faucibus.</p>
+                <p>I know deep learning very well and more importantly I am totally in love with it. I have both theoretical
+                    and practical knowledge about PyTorch, Tensorflow, fastai and keras. I can handle different types of
+                    networks like dense, convolution or recurrent.</p>
             </div>
             <div class="skillsBx">
                 <img src="./templates/icon5.png" alt="icon1">
                 <h2>Computer Vision</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat placerat risus quis
-                    porttitor. Phasellus imperdiet vulputate nibh, ut mattis leo suscipit rutrum. Interdum et malesuada
-                    fames ac ante ipsum primis in faucibus.</p>
+                <p>I can work with OpenCV, image recognition, image classification, object detection and object tracking.
+                    I have the ability to extract text from images if there is any and many more things too.</p>
             </div>
             <div class="skillsBx">
                 <img src="./templates/icon6.png" alt="icon1">
                 <h2>Natural Language Processing</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi placerat placerat risus quis
-                    porttitor. Phasellus imperdiet vulputate nibh, ut mattis leo suscipit rutrum. Interdum et malesuada
-                    fames ac ante ipsum primis in faucibus.</p>
+                <p>That one is my favorite, I am truly fascinated by the idea of computers somewhat understanding text
+                    or voice, extracting the context and meaning of given sentence for future analysis. Talking with
+                    chatbots that I created is probably the most fun part of coding for me.</p>
             </div>
         </div>
     </section>
     <section class="projects" id="projects">
         <div class="heading">
             <h2>My Projects</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Some demos of projects I'm the most proud of.</p>
         </div>
         <div class="content">
             <div class="projectsBx">
@@ -481,7 +512,9 @@ img{
     <section class="contact" id="contact">
         <div class="heading white">
             <h2>Contact Me</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Have any questions? Feel free to mail me or contact me on
+                <a href="https://www.linkedin.com/in/micha%C5%82-podlaszuk-612a99200/">LinkedIn</a>.
+            </p>
         </div>
         <div class="content">
             <div class="contactInfo">
@@ -517,7 +550,7 @@ img{
                 </div>
             </div>
             <div class="formBx">
-                <form>
+                <form action="mailto:michalpodlaszuk@gmail.com" method="post" enctype="multipart/form-data" name="EmailForm">
                     <h3>Message Me</h3>
                     <input type="text" name="" placeholder="Full Name">
                     <input type="email" name="" placeholder="Email">
